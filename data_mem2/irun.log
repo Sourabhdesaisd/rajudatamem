@@ -1,0 +1,26 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 26, 2023 at 20:43:49 IST
+irun
+	-access +rwc
+	load.v
+	store.v
+	memory.v
+	topmodule.v
+Loading snapshot worklib.tb_data_mem_top:v .................... Done
+ncsim> source /tools/cadence/INCISIVE152/tools/inca/files/ncsimrc
+ncsim> run
+
+======== DATA MEMORY TEST START ========
+
+PASS :                                                                                                                                                                                         LW test after SW | exp=aabbccdd | got=aabbccdd
+PASS :                                                                                                                                                                                         LB test after SB | exp=0000007f | got=0000007f
+PASS :                                                                                                                                                                                        LBU test after SB | exp=00000080 | got=00000080
+PASS :                                                                                                                                                                                      LH sign extend test | exp=ffff8001 | got=ffff8001
+PASS :                                                                                                                                                                                     LHU zero extend test | exp=00008001 | got=00008001
+
+======== DATA MEMORY TEST COMPLETE ========
+
+Simulation complete via $finish(1) at time 175 NS + 0
+./topmodule.v:176         $finish;
+ncsim> exit
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 26, 2023 at 20:43:49 IST  (total: 00:00:00)
